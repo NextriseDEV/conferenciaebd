@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Conferência EBD 2026 | Save the Date</title>
+
+    <link rel="icon" href="https://adsabrasil-embuguacu.github.io/conferenciabiblicaEBD_checkout/Confer%C3%AAncia%20Escola%20B%C3%ADblica%202026.jpg" type="image/jpeg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#C5A059',
+                        goldLight: '#E5C585',
+                        deepDark: '#050505',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        widest: '.25em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Fundo Fixo */
+        .bg-custom {
+            background-image: url('https://adsabrasil-embuguacu.github.io/conferenciabiblicaEBD_checkout/Confer%C3%AAncia%20Escola%20B%C3%ADblica%202026.jpg');
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            filter: grayscale(30%); /* Um toque de desaturação para elegância */
+        }
+
+        /* Overlay Gradiente Moderno */
+        .bg-overlay {
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(5,5,5,0.6) 0%, rgba(5,5,5,0.9) 100%);
+            z-index: -1;
+        }
+
+        /* Novo Estilo do Timer (Minimalista) */
+        .timer-value {
+            font-variant-numeric: tabular-nums;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        
+        .timer-label {
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            color: rgba(255,255,255,0.6);
+            margin-top: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        /* Divisória Vertical do Timer */
+        .timer-separator {
+            width: 1px;
+            height: 40px;
+            background: rgba(255,255,255,0.15);
+            margin: 0 10px;
+        }
+
+        /* Animação Suave de Entrada */
+        .animate-enter {
+            animation: slideUpFade 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        @keyframes slideUpFade {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Botão WhatsApp Flutuante */
+        .whatsapp-float {
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.5);
+        }
+    </style>
+</head>
+<body class="min-h-[100dvh] flex flex-col items-center justify-center relative font-sans text-white overflow-hidden">
+
+    <div class="bg-custom"></div>
+    <div class="bg-overlay"></div>
+
+    <main class="container mx-auto px-6 text-center z-10 w-full max-w-4xl flex flex-col items-center justify-center h-full py-12">
+        
+        <div class="animate-enter" style="animation-delay: 0.1s;">
+            <p class="text-goldLight text-xs md:text-sm uppercase tracking-[0.3em] mb-4 font-semibold">Save the Date</p>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-white leading-tight mb-2">
+                Conferência <br/> <span class="text-gold italic">EBD 2026</span>
+            </h1>
+            <div class="w-16 h-[2px] bg-gold mx-auto my-6 opacity-70"></div>
+            <p class="text-gray-300 font-light text-sm md:text-lg max-w-xl mx-auto leading-relaxed">
+                Um tempo precioso de aprendizado e renovação espiritual. <br/> Prepare seu coração para o que Deus fará.
+            </p>
+        </div>
+
+        <div class="mt-12 md:mt-16 w-full max-w-3xl animate-enter" style="animation-delay: 0.3s;">
+            <div class="flex flex-wrap justify-center items-center gap-4 md:gap-8">
+                
+                <div class="flex flex-col items-center w-20 md:w-24">
+                    <span id="days" class="timer-value font-serif text-4xl md:text-6xl text-white">00</span>
+                    <span class="timer-label">Dias</span>
+                </div>
+
+                <div class="timer-separator hidden md:block"></div>
+
+                <div class="flex flex-col items-center w-20 md:w-24">
+                    <span id="hours" class="timer-value font-serif text-4xl md:text-6xl text-white">00</span>
+                    <span class="timer-label">Horas</span>
+                </div>
+
+                <div class="timer-separator hidden md:block"></div>
+
+                <div class="flex flex-col items-center w-20 md:w-24">
+                    <span id="minutes" class="timer-value font-serif text-4xl md:text-6xl text-white">00</span>
+                    <span class="timer-label">Min</span>
+                </div>
+
+                <div class="timer-separator hidden md:block"></div>
+
+                <div class="flex flex-col items-center w-20 md:w-24">
+                    <span id="seconds" class="timer-value font-serif text-4xl md:text-6xl text-gold">00</span>
+                    <span class="timer-label text-gold">Seg</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mt-16 animate-enter" style="animation-delay: 0.5s;">
+            <div class="inline-flex items-center gap-3 px-6 py-3 border border-white/20 rounded-full bg-white/5 backdrop-blur-md">
+                <i class="fa-regular fa-calendar text-gold"></i>
+                <span class="uppercase tracking-widest text-xs md:text-sm font-semibold">14 de Março de 2026</span>
+            </div>
+            <p class="mt-4 text-xs text-gray-500 uppercase tracking-widest">Embu-Guaçu - SP</p>
+        </div>
+
+    </main>
+
+    <a href="https://wa.me/5511946028592?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20Confer%C3%AAncia%20EBD%202026." 
+       target="_blank"
+       class="whatsapp-float fixed bottom-6 right-6 md:bottom-10 md:right-10 bg-[#25D366] text-white w-14 h-14 md:w-auto md:h-auto md:px-6 md:py-3 rounded-full flex items-center justify-center gap-3 z-50 group no-underline">
+        <i class="fa-brands fa-whatsapp text-2xl md:text-xl"></i>
+        <span class="hidden md:block font-bold text-sm">Mais Informações</span>
+        
+        <span class="absolute right-16 bg-white text-black text-xs font-bold px-3 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap md:hidden">
+            Fale Conosco
+        </span>
+    </a>
+
+    <script>
+        // Data alvo: 14 de Março de 2026
+        const targetDate = new Date("March 14, 2026 00:00:00").getTime();
+
+        const updateTimer = () => {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            const format = (num) => num < 10 ? "0" + num : num;
+
+            document.getElementById("days").innerText = format(days);
+            document.getElementById("hours").innerText = format(hours);
+            document.getElementById("minutes").innerText = format(minutes);
+            document.getElementById("seconds").innerText = format(seconds);
+        };
+
+        setInterval(updateTimer, 1000);
+        updateTimer();
+    </script>
+</body>
+</html>
